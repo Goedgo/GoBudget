@@ -13,7 +13,6 @@ namespace GoBudget
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
