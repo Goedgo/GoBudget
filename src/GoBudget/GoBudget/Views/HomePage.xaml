@@ -1,10 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:GoBudget.ViewModels"
              x:Class="GoBudget.Views.HomePage"
-             Background="white">
-    <ContentPage.Content>
-        
+             Background="white"
+             x:DataType="viewmodels:HomeViewModel">
+    
+    <ContentPage.BindingContext>
+        <viewmodels:HomeViewModel/>
+    </ContentPage.BindingContext>    
+    
         <Grid RowDefinitions="*,Auto,Auto,*">
 
             <Label  Grid.Row="1" FontSize="Large"
@@ -16,5 +21,5 @@
 
         </Grid>
         
-    </ContentPage.Content>
+    
 </ContentPage>

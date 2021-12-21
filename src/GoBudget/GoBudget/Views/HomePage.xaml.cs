@@ -15,37 +15,6 @@ namespace GoBudget.Views
         public HomePage()
         {
             InitializeComponent();
-            BindingContext = this;
-            IncreaseCount = new Command(onIncrease);
-        }
-
-        int count = 0;
-
-        public ICommand IncreaseCount { get; }
-
-        private string _countDisplay = "Clicked  times!";
-
-        public string CountDisplay
-        {
-            get { return _countDisplay; }
-            set
-            {
-                if (value == _countDisplay)
-                    return;
-                _countDisplay = value;
-               // OnPropertyChanged("CountDisplay");
-               // OnPropertyChanged(nameof(CountDisplay));
-               OnPropertyChanged();
-
-            }
-        }
-
-
-        private void onIncrease()
-        {
-            count++;
-            CountDisplay = $"you have liked {count} times. ";
-
         }
     }
 }
