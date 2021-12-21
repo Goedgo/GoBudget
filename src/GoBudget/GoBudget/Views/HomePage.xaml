@@ -16,6 +16,7 @@
             
             <Button x:Name="buttonClick"
                 Text="click it"
+                    Clicked="ButtonClick_Clicked"
                     Grid.Row="2"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"/>

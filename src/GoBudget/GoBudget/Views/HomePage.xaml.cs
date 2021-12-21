@@ -15,9 +15,6 @@ namespace GoBudget.Views
         public HomePage()
         {
             InitializeComponent();
-            buttonClick.Text = "liked";
-            buttonClick.Clicked += ButtonClick_Clicked;
-
         }
 
         int count = 0;
