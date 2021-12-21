@@ -4,21 +4,17 @@
              x:Class="GoBudget.Views.HomePage"
              Background="white">
     <ContentPage.Content>
+        
         <Grid RowDefinitions="*,Auto,Auto,*">
 
-            <Entry Text="{Binding CountDisplay}" />
-            <Label  Grid.Row="1"
-                Text="{Binding CountDisplay}"
-                FontSize="Large"
+            <Label  Grid.Row="1" FontSize="Large"
+                Text="{Binding CountDisplay}"              
                 HorizontalOptions="CenterAndExpand" />
 
-            <Button   Grid.Row="2"
-                x:Name="buttonClick"
-                Text="click it"
-                    Clicked="ButtonClick_Clicked"/>
-
-
+            <Button   Grid.Row="2" Text="click it"
+                Command="{Binding IncreaseCount}"/>
 
         </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

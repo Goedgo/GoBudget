@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,9 +16,12 @@ namespace GoBudget.Views
         {
             InitializeComponent();
             BindingContext = this;
+            IncreaseCount = new Command(onIncrease);
         }
 
         int count = 0;
+
+        public ICommand IncreaseCount { get; }
 
         private string _countDisplay = "Clicked  times!";
 
@@ -38,7 +41,7 @@ namespace GoBudget.Views
         }
 
 
-        private void ButtonClick_Clicked(object sender, EventArgs e)
+        private void onIncrease()
         {
             count++;
             CountDisplay = $"you have liked {count} times. ";
