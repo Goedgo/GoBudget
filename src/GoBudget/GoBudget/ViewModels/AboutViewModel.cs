@@ -1,11 +1,11 @@
-﻿using System;
+﻿using MvvmHelpers.Commands;
+using System;
 using System.Windows.Input;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace GoBudget.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class AboutViewModel : ViewModelBase
     {
         public AboutViewModel()
         {

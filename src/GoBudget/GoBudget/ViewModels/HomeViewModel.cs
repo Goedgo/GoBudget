@@ -7,11 +7,12 @@ using System.Windows.Input;
 
 namespace GoBudget.ViewModels
 {
-    public class HomeViewModel : ObservableObject
+    public class HomeViewModel : ViewModelBase
     {
         public HomeViewModel()
         {
             IncreaseCount = new Command(OnIncrease);
+            Title = "goedgo.com";
         }
         int count = 0;
 
