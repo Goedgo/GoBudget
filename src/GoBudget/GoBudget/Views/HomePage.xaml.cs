@@ -15,13 +15,33 @@ namespace GoBudget.Views
         public HomePage()
         {
             InitializeComponent();
+            BindingContext = this;
         }
 
         int count = 0;
+
+        private string _countDisplay = "Clicked  times!";
+
+        public string CountDisplay
+        {
+            get { return _countDisplay; }
+            set
+            {
+                if (value == _countDisplay)
+                    return;
+                _countDisplay = value;
+               // OnPropertyChanged("CountDisplay");
+               // OnPropertyChanged(nameof(CountDisplay));
+               OnPropertyChanged();
+
+            }
+        }
+
+
         private void ButtonClick_Clicked(object sender, EventArgs e)
         {
             count++;
-            labelCount.Text = $"you have liked {count} times. ";
+            CountDisplay = $"you have liked {count} times. ";
 
         }
     }

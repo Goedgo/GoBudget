@@ -5,21 +5,19 @@
              Background="white">
     <ContentPage.Content>
         <Grid RowDefinitions="*,Auto,Auto,*">
-            
-            <Label x:Name="labelCount"
-                Text="Welcome to goedgo!"
-                   Grid.Row="1"
-                   BackgroundColor="Orange"
-                   FontSize="Large"
-                VerticalOptions="CenterAndExpand" 
+
+            <Entry Text="{Binding CountDisplay}" />
+            <Label  Grid.Row="1"
+                Text="{Binding CountDisplay}"
+                FontSize="Large"
                 HorizontalOptions="CenterAndExpand" />
-            
-            <Button x:Name="buttonClick"
+
+            <Button   Grid.Row="2"
+                x:Name="buttonClick"
                 Text="click it"
-                    Clicked="ButtonClick_Clicked"
-                    Grid.Row="2"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"/>
+                    Clicked="ButtonClick_Clicked"/>
+
+
 
         </Grid>
     </ContentPage.Content>
