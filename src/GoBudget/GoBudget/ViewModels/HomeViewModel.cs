@@ -1,12 +1,13 @@
-﻿using System;
+﻿using MvvmHelpers;
+using MvvmHelpers.Commands;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
-using Xamarin.Forms;
 
 namespace GoBudget.ViewModels
 {
-    public class HomeViewModel : BindableObject
+    public class HomeViewModel : ObservableObject
     {
         public HomeViewModel()
         {
@@ -20,17 +21,8 @@ namespace GoBudget.ViewModels
 
         public string CountDisplay
         {
-            get { return _countDisplay; }
-            set
-            {
-                if (value == _countDisplay)
-                    return;
-                _countDisplay = value;
-                // OnPropertyChanged("CountDisplay");
-                // OnPropertyChanged(nameof(CountDisplay));
-                OnPropertyChanged();
-
-            }
+            get => _countDisplay;
+            set => SetProperty(ref _countDisplay, value);
         }
 
 
