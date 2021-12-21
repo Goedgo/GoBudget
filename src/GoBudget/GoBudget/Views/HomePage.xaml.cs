@@ -15,6 +15,17 @@ namespace GoBudget.Views
         public HomePage()
         {
             InitializeComponent();
+            buttonClick.Text = "liked";
+            buttonClick.Clicked += ButtonClick_Clicked;
+
+        }
+
+        int count = 0;
+        private void ButtonClick_Clicked(object sender, EventArgs e)
+        {
+            count++;
+            labelCount.Text = $"you have liked {count} times. ";
+
         }
     }
 }
